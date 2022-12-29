@@ -15,8 +15,12 @@ public class BaseClass {
 
 	@BeforeMethod
 	public void setUp() {
+		/*
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\NGAWANG DAKPA\\eclipse-workspace\\com.bankofamerica\\driver\\chromedriver.exe");
+		*/
+		
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.bankofamerica.com/");
 		driver.manage().window().maximize();
