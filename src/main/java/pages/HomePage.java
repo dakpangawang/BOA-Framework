@@ -31,7 +31,7 @@ public class HomePage {
 
 	public void clickloginButton() throws InterruptedException {
 		clickElement(logo);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 
 	public void clickFindYourClosestAtm() throws InterruptedException {

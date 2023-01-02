@@ -3,6 +3,7 @@ package testPages;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -96,7 +97,7 @@ public class HomePageTest extends BaseClass {
 	    System.out.println("name attribute value: "+nameAttributeValue);
 	}
 	
-	@Test (enabled = true)
+	@Test (enabled = false)
 	public void use_of_clear () throws InterruptedException {
 		Thread.sleep(3000);
 		driver.get("https://www.amazon.com/");
@@ -110,6 +111,49 @@ public class HomePageTest extends BaseClass {
 	    Thread.sleep(3000);
 	}
 	
+	@Test (enabled = false)
+	public void userIdAndEnter () throws InterruptedException {
+		driver.findElement(By.xpath("//input[@name='onlineId1']")).sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
+	}
 	
-
+	@Test (enabled = false)
+	public void use_of_navigate_method() throws InterruptedException{
+		Thread.sleep(5000);
+		driver.navigate().to("https://www.amazon.com");
+		Thread.sleep(5000);
+		driver.navigate().back();
+		Thread.sleep(5000);
+		driver.navigate().forward();
+		Thread.sleep(5000);
+		driver.navigate().refresh();
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
